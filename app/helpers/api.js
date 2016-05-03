@@ -30,7 +30,7 @@ export function getCurrentWeather (city) {
     .then((currentWeatherData) => currentWeatherData.data)
 }
 
-export function getForcast (city) {
+export function getForecast (city) {
   const queryStringData = getQueryStringData(city)
   const url = prepUrl('forecast/daily', queryStringData)
 
