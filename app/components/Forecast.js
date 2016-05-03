@@ -41,11 +41,11 @@ function ForecastUI ({city, forecast, handleClick}) {
   )
 }
 
-function Forecast (props)
+function Forecast (props) {
   return (
     <div>
       {
-        isLoading === true
+        props.isLoading === true
           ? <h1 style={styles.header}> Loading </h1>
           : <ForecastUI
               city={props.city}

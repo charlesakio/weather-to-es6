@@ -1,11 +1,11 @@
-import axios from 'axios'
+const axios = require('axios')
 
 const _baseURL = 'http://api.openweathermap.org/data/2.5/'
-const _APIKEY = 'b714ec74bbab5650795063cb0fdf5fbe'
+const _APIKEY = 'a8e29972d260d0df1639bf0d7199f680'
 
 function prepRouteParams (queryStringData) {
   return Object.keys(queryStringData)
-    .map((key) => key + '=' + encodeURIComponent(queryStringData[key])
+    .map((key) => key + '=' + encodeURIComponent(queryStringData[key]))
     .join('&')
 }
 
@@ -27,7 +27,7 @@ export function getCurrentWeather (city) {
   const url = prepUrl('weather', queryStringData)
 
   return axios.get(url)
-    .then((currentWeatherData) => return currentWeatherData.data)
+    .then((currentWeatherData) => currentWeatherData.data)
 }
 
 export function getForcast (city) {

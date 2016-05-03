@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react'
-import { GetCityContainer } from '../containers/GetCityContainer'
+import GetCityContainer from '../containers/GetCityContainer'
 
 const styles = {
   container: {

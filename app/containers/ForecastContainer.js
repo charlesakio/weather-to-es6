@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Forecast from '../components/Forecast'
-import getForcast from '../helpers/api'
-
+import { getForecast } from '../helpers/api'
+ 
 class ForecastContainer extends Component {
   constructor () {
     super()
@@ -17,7 +17,7 @@ class ForecastContainer extends Component {
     this.makeRequest(nextProps.routeParams.city)
   }
   makeRequest (city) {
-    getForcast(city)
+    getForecast(city)
       .then((forecastData) => {
         this.setState({
           isLoading: false,
